@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song List</title>
+</head>
+<body>
+    <h1>Song List</h1>
+    <form method="POST" action="/">
+        <label for="title">Add a new song title:</label>
+        <input type="text" name="title" id="title" required>
+        <button type="submit">Add</button>
+    </form>
+    <h2>Songs:</h2>
+    <ul>
+        {% for song in songs %}
+        <li>{{ song.title }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
